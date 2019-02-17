@@ -7,6 +7,13 @@ import java.util.Objects;
 
 public class MyStack<T> {
 
+    int elementCount;
+    int capacityIncrement;
+    transient int modCount = 0;
+    //        private static final int MAX_ARRAY_SIZE = Integer.MAX_VALUE - 8;
+    private static final int MAX_ARRAY_SIZE = 8;//for test
+    Object[] elementData = new Object[elementCount];
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -39,12 +46,7 @@ public class MyStack<T> {
         return sb.toString();
     }
 
-    int elementCount;
-    int capacityIncrement;
-    transient int modCount = 0;
-//        private static final int MAX_ARRAY_SIZE = Integer.MAX_VALUE - 8;
-    private static final int MAX_ARRAY_SIZE = 8;//for test
-    Object[] elementData = new Object[elementCount];
+
 
     public int getElementCount() {
         return elementCount;

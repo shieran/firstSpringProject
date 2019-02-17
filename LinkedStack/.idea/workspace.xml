@@ -13,7 +13,16 @@
     <SUITE FILE_PATH="coverage/superProject$MyLinkedListTest.ic" NAME="MyLinkedListTest Coverage Results" MODIFIED="1550402997530" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>by.hancharou.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/LinkedStack$MyStackTest.ic" NAME="MyStackTest Coverage Results" MODIFIED="1550418900817" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>by.hancharou.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/LinkedStack$MyLinkedListTest.ic" NAME="MyLinkedListTest Coverage Results" MODIFIED="1550418834928" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>by.hancharou.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/superProject$MyLinkedListTest_hashcodeTest.ic" NAME="MyLinkedListTest.hashcodeTest Coverage Results" MODIFIED="1550337518064" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>by.hancharou.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/LinkedStack$FractionTest.ic" NAME="FractionTest Coverage Results" MODIFIED="1550418693837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>by.hancharou.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/superProject$FractionTest_fractionConstructor.ic" NAME="FractionTest.fractionConstructor Coverage Results" MODIFIED="1550168859774" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -30,15 +39,15 @@
     </SUITE>
   </component>
   <component name="CoverageViewManager">
-    <option name="myElementSize" value="266" />
+    <option name="myElementSize" value="267" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/by/hancharou/MyStack.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="111" column="44" selection-start-line="111" selection-start-column="44" selection-end-line="111" selection-end-column="44" />
+            <state relative-caret-position="238">
+              <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -47,25 +56,9 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/hancharou/Fraction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="624">
-              <caret line="101" column="9" selection-start-line="101" selection-start-column="9" selection-end-line="101" selection-end-column="9" />
-              <folding>
-                <element signature="method#Fraction#0;class#Fraction#0" />
-                <element signature="e#636#637#0" expanded="true" />
-                <element signature="e#668#669#0" expanded="true" />
-                <element signature="e#703#704#0" expanded="true" />
-                <element signature="e#737#738#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/by/hancharou/MyStackTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="624">
+            <state relative-caret-position="288">
               <caret line="126" column="31" selection-start-line="126" selection-start-column="31" selection-end-line="126" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -77,7 +70,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/by/hancharou/MyLinkedListTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="624">
+            <state relative-caret-position="2040">
               <caret line="121" selection-start-line="121" selection-end-line="121" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -89,20 +82,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/by/hancharou/FractionTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
+            <state relative-caret-position="374">
               <caret line="24" column="61" selection-start-line="24" selection-start-column="61" selection-end-line="24" selection-end-column="61" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/hancharou/MyLinkedList.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="624">
-              <caret line="199" selection-start-line="199" selection-end-line="199" />
             </state>
           </provider>
         </entry>
@@ -117,7 +101,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -126,11 +110,11 @@
         <option value="$PROJECT_DIR$/src/main/java/by/hancharou/LessThanZeroException.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/hancharou/App.java" />
         <option value="$PROJECT_DIR$/src/test/java/by/hancharou/MyStackTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/hancharou/MyStack.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/hancharou/Fraction.java" />
         <option value="$PROJECT_DIR$/src/test/java/by/hancharou/FractionTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/by/hancharou/MyLinkedListTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/hancharou/MyLinkedList.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/hancharou/MyStack.java" />
       </list>
     </option>
   </component>
@@ -141,7 +125,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="85" />
     <option name="y" value="25" />
     <option name="width" value="1750" />
@@ -152,7 +136,68 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="LinkedStack" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LinkedStack" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LinkedStack" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LinkedStack" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LinkedStack" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LinkedStack" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LinkedStack" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LinkedStack" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LinkedStack" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LinkedStack" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hancharou" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LinkedStack" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LinkedStack" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LinkedStack" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LinkedStack" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LinkedStack" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LinkedStack" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hancharou" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -174,7 +219,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.FractionTest">
+  <component name="RunManager" selected="JUnit.MyStackTest">
     <configuration name="FractionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="superProject" />
       <extension name="coverage">
@@ -251,9 +296,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.FractionTest" />
-        <item itemvalue="JUnit.MyLinkedListTest" />
         <item itemvalue="JUnit.MyStackTest" />
+        <item itemvalue="JUnit.MyLinkedListTest" />
+        <item itemvalue="JUnit.FractionTest" />
         <item itemvalue="JUnit.MyStackTest.toStingAndPushTest" />
         <item itemvalue="JUnit.MyStackTest.removeElementAtTest3" />
       </list>
@@ -277,6 +322,7 @@
       <workItem from="1550405261986" duration="4467000" />
       <workItem from="1550411582582" duration="466000" />
       <workItem from="1550417868794" duration="132000" />
+      <workItem from="1550418628771" duration="637000" />
     </task>
     <task id="LOCAL-00001" summary="MyLinkedListCreation">
       <created>1550405078498</created>
@@ -289,15 +335,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MyStackTest - 2019.02.17 at 14h 27m 13s.xml">
-      <configuration name="MyStackTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MyStackTest - 2019.02.17 at 14h 28m 30s.xml">
-      <configuration name="MyStackTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MyLinkedListTest - 2019.02.17 at 14h 29m 53s.xml">
-      <configuration name="MyLinkedListTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="MyLinkedListTest - 2019.02.17 at 14h 30m 08s.xml">
       <configuration name="MyLinkedListTest" configurationId="JUnit" />
     </history-entry>
@@ -319,14 +356,24 @@
     <history-entry file="FractionTest - 2019.02.17 at 14h 44m 36s.xml">
       <configuration name="FractionTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="FractionTest - 2019.02.17 at 18h 51m 57s.xml">
+      <configuration name="FractionTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MyLinkedListTest - 2019.02.17 at 18h 54m 18s.xml">
+      <configuration name="MyLinkedListTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MyStackTest - 2019.02.17 at 18h 55m 21s.xml">
+      <configuration name="MyStackTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30144000" />
+    <option name="totallyTimeSpent" value="30781000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.16644295" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16577181" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -487,46 +534,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/by/hancharou/FractionTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="61" selection-start-line="24" selection-start-column="61" selection-end-line="24" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/hancharou/MyLinkedList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="199" selection-start-line="199" selection-end-line="199" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/by/hancharou/MyLinkedListTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="121" selection-start-line="121" selection-end-line="121" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/by/hancharou/MyStackTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="126" column="31" selection-start-line="126" selection-start-column="31" selection-end-line="126" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/hancharou/Fraction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
+        <state relative-caret-position="1581">
           <caret line="101" column="9" selection-start-line="101" selection-start-column="9" selection-end-line="101" selection-end-column="9" />
           <folding>
             <element signature="method#Fraction#0;class#Fraction#0" />
@@ -538,10 +548,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/by/hancharou/MyLinkedListTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2040">
+          <caret line="121" selection-start-line="121" selection-end-line="121" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/by/hancharou/FractionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="24" column="61" selection-start-line="24" selection-start-column="61" selection-end-line="24" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/hancharou/MyLinkedList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3247">
+          <caret line="199" selection-start-line="199" selection-end-line="199" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/by/hancharou/MyStackTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="126" column="31" selection-start-line="126" selection-start-column="31" selection-end-line="126" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/hancharou/MyStack.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="111" column="44" selection-start-line="111" selection-start-column="44" selection-end-line="111" selection-end-column="44" />
+        <state relative-caret-position="238">
+          <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
