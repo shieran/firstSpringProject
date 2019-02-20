@@ -1,0 +1,7 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+LinkedStack,by.hancharou,Fraction,0,256,0,38,0,51,0,32,0,13
+LinkedStack,by.hancharou,MyStack,0,316,0,34,0,63,0,33,0,16
+LinkedStack,by.hancharou,LessThanZeroException,0,3,0,0,0,1,0,1,0,1
+LinkedStack,by.hancharou,MyLinkedList,0,382,0,50,0,88,0,43,0,18
+LinkedStack,by.hancharou,App,12,0,0,0,4,0,2,0,2,0
+LinkedStack,by.hancharou,MyLinkedList.MyNode,0,12,0,0,0,5,0,1,0,1

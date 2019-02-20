@@ -47,8 +47,27 @@ public class MyStackTest {
         numbers3.push(3);
         numbers3.push(2);
 
+        MyStack<Integer> numbers6 = new MyStack<>();
+        numbers6.push(3);
+        numbers6.push(3);
+        numbers6.push(3);
+        numbers6.push(3);
+        numbers6.push(3);
+
+        MyStack<Integer> numbers4 = numbers;
+        MyStack<Integer> numbers5 = null;
+        Fraction fraction = new Fraction(2);
+
+
+
         assertTrue(numbers.equals(numbers2));
+        assertTrue(numbers.equals(numbers));
         assertFalse(numbers.equals(numbers3));
+        assertTrue(numbers.equals(numbers4));
+        assertFalse(numbers.equals(fraction));
+        assertFalse(numbers.equals(numbers5));
+        assertFalse(numbers.equals(numbers6));
+
 
     }
 
@@ -92,7 +111,15 @@ public class MyStackTest {
         stack.grow(-3);
     }
 
-    @Test (expected = EmptyStackException.class)
+    @Test
+    public void hugeCapacityTest3(){
+        MyStack<String> string = new MyStack<>();
+        assertEquals(Integer.MAX_VALUE, string.hugeCapacity(9));
+        assertEquals(8, string.hugeCapacity(3));
+    }
+
+
+        @Test (expected = EmptyStackException.class)
     public void peekTest(){
         MyStack<String> stack = new MyStack<>();
         stack.peek();
@@ -126,4 +153,19 @@ public class MyStackTest {
         stack.push("string");
         stack.removeElementAt(2);
     }
+
+    @Test
+    public void growTest(){
+        MyStack<Integer> integers = new MyStack<>();
+        integers.push(1);
+        integers.push(1);
+        integers.push(1);
+        integers.push(1);
+        integers.push(1);
+        integers.push(1);
+        integers.grow(2);
+    }
+
+
+
 }

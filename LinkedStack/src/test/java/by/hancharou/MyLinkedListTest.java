@@ -29,12 +29,15 @@ public class MyLinkedListTest {
     public void hashcodeTest(){
         MyLinkedList<Integer> myLinkedList = new MyLinkedList<>();
         MyLinkedList<Integer> myLinkedList2 = new MyLinkedList<>();
+        MyLinkedList<String> myLinkedList3 = new MyLinkedList<>();
         myLinkedList.add(0, 123);
         myLinkedList.add(1, 1123124124);
         myLinkedList2.add(0, 123);
+        myLinkedList3.add(0, null);
         myLinkedList2.add(1, 1123124124);
 
         assertTrue(myLinkedList.hashCode() == myLinkedList2.hashCode());
+        assertEquals(31, myLinkedList3.hashCode());
 
 
     }
@@ -77,6 +80,10 @@ public class MyLinkedListTest {
         MyLinkedList<Integer> myLinkedList = new MyLinkedList<>();
         MyLinkedList<Integer> myLinkedList2 = new MyLinkedList<>();
         MyLinkedList<Integer> myLinkedList3 = new MyLinkedList<>();
+        MyLinkedList<Integer> myLinkedList5 = new MyLinkedList<>();
+        MyLinkedList<Integer> myLinkedList4 = null;
+        Fraction fraction = new Fraction(12);
+        Fraction fraction2 = null;
 
         myLinkedList.add(0,0);
         myLinkedList.add(1,1);
@@ -86,11 +93,22 @@ public class MyLinkedListTest {
         myLinkedList2.add(1,1);
         myLinkedList2.add(2,2);
 
+
+        myLinkedList5.add(0,2);
+        myLinkedList5.add(1,6);
+        myLinkedList5.add(2,2);
+
         myLinkedList3.add(0,2);
         myLinkedList3.add(1,3);
 
         assertTrue(myLinkedList.equals(myLinkedList2));
+        assertTrue(myLinkedList.equals(myLinkedList));
         assertFalse(myLinkedList.equals(myLinkedList3));
+        assertFalse(myLinkedList.equals(myLinkedList4));
+        assertFalse(myLinkedList.equals(fraction));
+        assertFalse(myLinkedList.equals(fraction2));
+        assertFalse(myLinkedList.equals(myLinkedList5));
+
     }
 
     @Test
@@ -107,6 +125,34 @@ public class MyLinkedListTest {
         myLinkedList2.add(2,1);
 
         assertEquals(false, myLinkedList.checkMyLinkedListsForEquals(myLinkedList2));
+    }
+
+    @Test
+    public void isElementIndexTest(){
+        MyLinkedList<Integer> myLinkedList = new MyLinkedList<>();
+        myLinkedList.add(0,1);
+        myLinkedList.add(0,1);
+        myLinkedList.add(0,1);
+        myLinkedList.add(0,1);
+        assertEquals(false, myLinkedList.isElementIndex(5));
+        assertEquals(true, myLinkedList.isElementIndex(0));
+        assertEquals(false, myLinkedList.isElementIndex(-1));
+        assertEquals(true, myLinkedList.isElementIndex(3));
+    }
+
+    @Test
+    public void isPositionIndexTest(){
+        MyLinkedList<Integer> myLinkedList = new MyLinkedList<>();
+        myLinkedList.add(0,1);
+        myLinkedList.add(0,1);
+        myLinkedList.add(0,1);
+        myLinkedList.add(0,1);
+
+        assertEquals(true, myLinkedList.isPositionIndex(0));
+        assertEquals(false, myLinkedList.isPositionIndex(-1));
+        assertEquals(false, myLinkedList.isPositionIndex(5));
+        assertEquals(true, myLinkedList.isPositionIndex(4));
+        assertEquals(true, myLinkedList.isPositionIndex(2));
     }
 
     @Test

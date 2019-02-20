@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="by.hancharou.AppTest" time="0.013" errors="0" skipped="0">
+<testsuite tests="12" failures="0" name="by.hancharou.FractionTest" time="0.026" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2018.3.2"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -63,5 +63,16 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="by.hancharou.AppTest" name="testApp" time="0.013"/>
+  <testcase classname="by.hancharou.FractionTest" name="compareToTest" time="0.007"/>
+  <testcase classname="by.hancharou.FractionTest" name="fractionConstructorTest" time="0.001"/>
+  <testcase classname="by.hancharou.FractionTest" name="add" time="0.001"/>
+  <testcase classname="by.hancharou.FractionTest" name="equalsTest" time="0.001"/>
+  <testcase classname="by.hancharou.FractionTest" name="toStringTest" time="0"/>
+  <testcase classname="by.hancharou.FractionTest" name="multiply" time="0"/>
+  <testcase classname="by.hancharou.FractionTest" name="fractionConstructorTest2" time="0.001"/>
+  <testcase classname="by.hancharou.FractionTest" name="fractionConstructorTest3" time="0"/>
+  <testcase classname="by.hancharou.FractionTest" name="fractionConstructorTest4" time="0.005"/>
+  <testcase classname="by.hancharou.FractionTest" name="fractionConstructorTest5" time="0.001"/>
+  <testcase classname="by.hancharou.FractionTest" name="fractionReductionTest" time="0.009"/>
+  <testcase classname="by.hancharou.FractionTest" name="hashCodeTest" time="0"/>
 </testsuite>

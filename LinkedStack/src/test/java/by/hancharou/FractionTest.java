@@ -51,6 +51,11 @@ public class FractionTest {
 
     }
 
+    @Test(expected = LessThanZeroException.class)
+    public void fractionConstructorTest5(){
+        Fraction testFraction1 = new Fraction(12, 0);
+    }
+
 
     @Test
     public void toStringTest(){
@@ -63,9 +68,13 @@ public class FractionTest {
         Fraction fraction = new Fraction(24,16);
         Fraction fraction1 = new Fraction(23,25);
         Fraction fraction2 = new Fraction(12,24);
+        Fraction fraction3 = new Fraction(6,4);
+        Fraction fraction4 = new Fraction(9,4);
         assertEquals("3/2", Fraction.fractionReduction(fraction).toString());
         assertEquals("23/25", Fraction.fractionReduction(fraction1).toString());
         assertEquals("1/2", Fraction.fractionReduction(fraction2).toString());
+        assertEquals("3/2", Fraction.fractionReduction(fraction3).toString());
+        assertEquals("9/4", Fraction.fractionReduction(fraction4).toString());
     }
 
     @Test
@@ -84,15 +93,20 @@ public class FractionTest {
     public void equalsTest(){
         Fraction fraction1 = new Fraction(2,4);
         Fraction fraction2 = new Fraction(2,4);
+        Fraction fraction5 = new Fraction(2,3);
         Fraction fraction3 = fraction1;
         Fraction fraction4 = new Fraction(3,2);
         Object object = new Object();
+        Object object1 = null;
+
 
 
         assertTrue(fraction1.equals(fraction3));
         assertTrue(fraction1.equals(fraction2));
         assertFalse(fraction1.equals(fraction4));
         assertFalse(fraction1.equals(object));
+        assertFalse(fraction1.equals(object1));
+        assertFalse(fraction1.equals(fraction5));
     }
 
     @Test

@@ -32,12 +32,17 @@ public class MyLinkedList<T> {
         return sb.toString();
     }
 
-    public boolean equals(MyLinkedList myLinkedList) {
-        if (this == myLinkedList) return true;
-        if (myLinkedList == null || getClass() != myLinkedList.getClass()) return false;
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()){
+            return false;
+        }
+        MyLinkedList<?> myLinkedList = (MyLinkedList<?>) o;
 
         return size() == myLinkedList.size() &&
-                modCount == myLinkedList.modCount && this.checkMyLinkedListsForEquals(myLinkedList);
+                this.checkMyLinkedListsForEquals(myLinkedList);
     }
 
     public boolean checkMyLinkedListsForEquals(MyLinkedList myLinkedList) {
@@ -138,7 +143,8 @@ public class MyLinkedList<T> {
             throw new IndexOutOfBoundsException(outOfBoundsMsg(index));
     }
 
-    private boolean isPositionIndex(int index) {
+//    private
+    boolean isPositionIndex(int index) {
         return index >= 0 && index <= size;
     }
 
@@ -174,7 +180,8 @@ public class MyLinkedList<T> {
         return unlink(node(index));
     }
 
-    private boolean isElementIndex(int index) {
+//    private
+    boolean isElementIndex(int index) {
         return index >= 0 && index < size;
     }
 

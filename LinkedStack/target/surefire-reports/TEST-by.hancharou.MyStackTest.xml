@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="by.hancharou.AppTest" time="0.013" errors="0" skipped="0">
+<testsuite tests="14" failures="0" name="by.hancharou.MyStackTest" time="0" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2018.3.2"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -63,5 +63,18 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="by.hancharou.AppTest" name="testApp" time="0.013"/>
+  <testcase classname="by.hancharou.MyStackTest" name="elementAtTest" time="0"/>
+  <testcase classname="by.hancharou.MyStackTest" name="removeElementAtTest1" time="0"/>
+  <testcase classname="by.hancharou.MyStackTest" name="removeElementAtTest2" time="0"/>
+  <testcase classname="by.hancharou.MyStackTest" name="removeElementAtTest3" time="0"/>
+  <testcase classname="by.hancharou.MyStackTest" name="hugeCapacityTest" time="0"/>
+  <testcase classname="by.hancharou.MyStackTest" name="hugeCapacityTest2" time="0"/>
+  <testcase classname="by.hancharou.MyStackTest" name="hugeCapacityTest3" time="0"/>
+  <testcase classname="by.hancharou.MyStackTest" name="popTest" time="0"/>
+  <testcase classname="by.hancharou.MyStackTest" name="peekTest" time="0"/>
+  <testcase classname="by.hancharou.MyStackTest" name="equalsTest" time="0"/>
+  <testcase classname="by.hancharou.MyStackTest" name="growTest" time="0"/>
+  <testcase classname="by.hancharou.MyStackTest" name="sizeTest" time="0"/>
+  <testcase classname="by.hancharou.MyStackTest" name="toStingAndPushTest" time="0"/>
+  <testcase classname="by.hancharou.MyStackTest" name="hashCodeTest" time="0"/>
 </testsuite>
