@@ -31,7 +31,6 @@ public class Fraction implements Comparable<Fraction> {
         return denumerator;
     }
 
-    //свой метод сравнения дробей
     @Override
     public int compareTo(Fraction fraction) {
         double thisDoubleValue = (double) this.numerator / (double) this.denumerator;
@@ -66,28 +65,24 @@ public class Fraction implements Comparable<Fraction> {
         return numerator + "/" + denumerator;
     }
 
-    //сложение дробей
     Fraction addFractions(Fraction fraction) {
         int newDenumerator = this.denumerator * fraction.denumerator;
         int newNumerator = this.numerator * fraction.denumerator + fraction.numerator * this.denumerator;
         return new Fraction(newNumerator, newDenumerator);
     }
 
-    //умножение дробей
     Fraction multiplyFractions(Fraction fraction) {
         int newDenumerator = this.denumerator * fraction.denumerator;
         int newNumerator = this.numerator * fraction.numerator;
         return new Fraction(newNumerator, newDenumerator);
     }
 
-    //сокращение дробей
     static Fraction fractionReduction(Fraction fraction) {
         Fraction someFraction;
         if (findMinimal(fraction) == 1) {
             for (int i = fraction.denumerator; i >= 2; i--) {
-                someFraction = getNewFraction(fraction, i);//метод getNewFraction проверяет, делятся ли числитель и знаменатель без остатка на число
-                //если да, то создаём новый объект на основе поделённых значений, если нет - вернем null
-                if (someFraction != null) {//если getNewFraction вернул не null, дробь сократилась, возвращаем новый объект
+                someFraction = getNewFraction(fraction, i);
+                if (someFraction != null) {
                     return someFraction;
                 }
             }
@@ -104,8 +99,7 @@ public class Fraction implements Comparable<Fraction> {
     }
 
 
-    //метод getNewFraction проверяет, делятся ли числитель и знаменатель без остатка на число
-    //если да, то создаём новый объект на основе поделённых значений, если нет - вернем null
+
     static Fraction getNewFraction(Fraction fraction, int num) {
         if (fraction.numerator % num == 0 && fraction.denumerator % num == 0) {
             return new Fraction(fraction.numerator / num, fraction.denumerator / num);
@@ -113,7 +107,7 @@ public class Fraction implements Comparable<Fraction> {
         return null;
     }
 
-    //определяет что меньше: числитель или знаменатель
+
     static int findMinimal(Fraction fraction) {
         if (fraction.numerator >= fraction.denumerator) {
             return 1;

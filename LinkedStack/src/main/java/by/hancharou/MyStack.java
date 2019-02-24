@@ -3,15 +3,13 @@ package by.hancharou;
 import java.util.Arrays;
 import java.util.EmptyStackException;
 import java.util.Objects;
-//push, pop, size, equals, hashcode, toString +++
-
 public class MyStack<T> {
 
     int elementCount;
     int capacityIncrement;
     transient int modCount = 0;
-    //        private static final int MAX_ARRAY_SIZE = Integer.MAX_VALUE - 8;
-    private static final int MAX_ARRAY_SIZE = 8;//for test
+    private static final int MAX_ARRAY_SIZE = Integer.MAX_VALUE - 8;
+//    private static final int MAX_ARRAY_SIZE = 8;//for test
     Object[] elementData = new Object[elementCount];
 
     @Override
@@ -50,7 +48,7 @@ public class MyStack<T> {
         return elementCount;
     }
 
-    // push
+
     public T push(T item) {
         addElement(item);
         return item;
@@ -63,14 +61,13 @@ public class MyStack<T> {
     }
 
     private void ensureCapacityHelper(int minCapacity) {
-        // overflow-conscious code
-        if (minCapacity - elementData.length > 0)
+        if (minCapacity - elementData.length > 0) {
             grow(minCapacity);
+        }
     }
 
-    //    private
+        private
     void grow(int minCapacity) {
-        // overflow-conscious code
         int oldCapacity = elementData.length;
         int newCapacity = oldCapacity *2;
         if (newCapacity - minCapacity < 0) {
@@ -82,9 +79,9 @@ public class MyStack<T> {
         elementData = Arrays.copyOf(elementData, newCapacity);
     }
 
-//    private
+    private
     int hugeCapacity(int minCapacity) {
-        if (minCapacity < 0) { // overflow
+        if (minCapacity < 0) {
             throw new OutOfMemoryError();
         }
         return (minCapacity > MAX_ARRAY_SIZE) ?
@@ -92,14 +89,11 @@ public class MyStack<T> {
                 MAX_ARRAY_SIZE;
     }
 
-    //pop + size
     public synchronized T pop() {
         T obj;
         int len = size();
-
         obj = peek();
         removeElementAt(len - 1);
-
         return obj;
     }
 
@@ -109,9 +103,9 @@ public class MyStack<T> {
 
     public synchronized T peek() {
         int len = size();
-
-        if (len == 0)
+        if (len == 0){
             throw new EmptyStackException();
+        }
         return elementAt(len - 1);
     }
 

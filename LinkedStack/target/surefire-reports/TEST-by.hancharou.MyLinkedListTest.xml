@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="12" failures="0" name="by.hancharou.MyLinkedListTest" time="0.007" errors="0" skipped="0">
+<testsuite tests="12" failures="0" name="by.hancharou.MyLinkedListTest" time="0" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2018.3.2"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -69,7 +69,7 @@
   <testcase classname="by.hancharou.MyLinkedListTest" name="isPositionIndexTest" time="0"/>
   <testcase classname="by.hancharou.MyLinkedListTest" name="getTest" time="0"/>
   <testcase classname="by.hancharou.MyLinkedListTest" name="equalsTest" time="0"/>
-  <testcase classname="by.hancharou.MyLinkedListTest" name="toStringTest" time="0.007"/>
+  <testcase classname="by.hancharou.MyLinkedListTest" name="toStringTest" time="0"/>
   <testcase classname="by.hancharou.MyLinkedListTest" name="sizeTest" time="0"/>
   <testcase classname="by.hancharou.MyLinkedListTest" name="checkElementIndexTest" time="0"/>
   <testcase classname="by.hancharou.MyLinkedListTest" name="isElementIndexTest" time="0"/>

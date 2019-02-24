@@ -1,11 +1,6 @@
 package by.hancharou;
 
-import java.util.*;
-
 public class MyLinkedList<T> {
-    //     add(T, int index), remove(index), get(int index) +++
-//    size, equals, hashcode, toString  ++++
-
 
     transient int size = 0;
     transient MyNode<T> first;
@@ -36,7 +31,7 @@ public class MyLinkedList<T> {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()){
+        if (o == null || getClass() != o.getClass()) {
             return false;
         }
         MyLinkedList<?> myLinkedList = (MyLinkedList<?>) o;
@@ -64,45 +59,36 @@ public class MyLinkedList<T> {
         return result;
     }
 
-//    private void linkFirst(T t) {
-//        final MyNode<T> f = first;
-//        final MyNode<T> newMyNode = new MyNode<>(null, t, f);
-//        first = newMyNode;
-//        if (f == null)
-//            last = newMyNode;
-//        else
-//            f.prev = newMyNode;
-//        size++;
-//        modCount++;
-//    }
 
     private void linkLast(T t) {
         final MyNode<T> l = last;
         final MyNode<T> newMyNode = new MyNode<>(l, t, null);
         last = newMyNode;
-        if (l == null)
+        if (l == null) {
             first = newMyNode;
-        else
+        }
+        else {
             l.next = newMyNode;
+        }
         size++;
         modCount++;
     }
 
     void linkBefore(T t, MyNode<T> succ) {
-        // assert succ != null;
         final MyNode<T> pred = succ.prev;
         final MyNode<T> newMyNode = new MyNode<>(pred, t, succ);
         succ.prev = newMyNode;
-        if (pred == null)
+        if (pred == null) {
             first = newMyNode;
-        else
+        }
+        else {
             pred.next = newMyNode;
+        }
         size++;
         modCount++;
     }
 
     T unlink(MyNode<T> x) {
-        // assert x != null;
         final T element = x.item;
         final MyNode<T> next = x.next;
         final MyNode<T> prev = x.prev;
@@ -128,22 +114,23 @@ public class MyLinkedList<T> {
     }
 
 
-    //  add method
     public void add(int index, T element) {
         checkPositionIndex(index);
 
-        if (index == size)
+        if (index == size) {
             linkLast(element);
-        else
+        }
+        else {
             linkBefore(element, node(index));
+        }
     }
 
     private void checkPositionIndex(int index) {
-        if (!isPositionIndex(index))
+        if (!isPositionIndex(index)) {
             throw new IndexOutOfBoundsException(outOfBoundsMsg(index));
+        }
     }
 
-//    private
     boolean isPositionIndex(int index) {
         return index >= 0 && index <= size;
     }
@@ -153,39 +140,37 @@ public class MyLinkedList<T> {
     }
 
     private void checkElementIndex(int index) {
-        if (!isElementIndex(index))
+        if (!isElementIndex(index)) {
             throw new IndexOutOfBoundsException(outOfBoundsMsg(index));
+        }
     }
 
     MyNode<T> node(int index) {
-        // assert isElementIndex(index);
-
         if (index < (size >> 1)) {
             MyNode<T> x = first;
-            for (int i = 0; i < index; i++)
+            for (int i = 0; i < index; i++) {
                 x = x.next;
+            }
             return x;
         } else {
             MyNode<T> x = last;
-            for (int i = size - 1; i > index; i--)
+            for (int i = size - 1; i > index; i--) {
                 x = x.prev;
+            }
             return x;
         }
     }
 
 
-    //    remove method
     public T remove(int index) {
         checkElementIndex(index);
         return unlink(node(index));
     }
 
-//    private
     boolean isElementIndex(int index) {
         return index >= 0 && index < size;
     }
 
-    // get method
     public T get(int index) {
         checkElementIndex(index);
         return node(index).item;

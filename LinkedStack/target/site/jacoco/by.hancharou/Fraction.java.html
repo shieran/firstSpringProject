@@ -31,94 +31,88 @@ public class Fraction implements Comparable&lt;Fraction&gt; {
 <span class="fc" id="L31">        return denumerator;</span>
     }
 
-    //свой метод сравнения дробей
     @Override
     public int compareTo(Fraction fraction) {
-<span class="fc" id="L37">        double thisDoubleValue = (double) this.numerator / (double) this.denumerator;</span>
-<span class="fc" id="L38">        double fractionDoubleValue = (double) fraction.numerator / (double) fraction.denumerator;</span>
-<span class="fc bfc" id="L39" title="All 2 branches covered.">        if (thisDoubleValue &gt; fractionDoubleValue)</span>
-<span class="fc" id="L40">            return 1;</span>
-<span class="fc bfc" id="L41" title="All 2 branches covered.">        else if (thisDoubleValue &lt; fractionDoubleValue)</span>
-<span class="fc" id="L42">            return -1;</span>
-<span class="fc" id="L43">        else return 0;</span>
+<span class="fc" id="L36">        double thisDoubleValue = (double) this.numerator / (double) this.denumerator;</span>
+<span class="fc" id="L37">        double fractionDoubleValue = (double) fraction.numerator / (double) fraction.denumerator;</span>
+<span class="fc bfc" id="L38" title="All 2 branches covered.">        if (thisDoubleValue &gt; fractionDoubleValue)</span>
+<span class="fc" id="L39">            return 1;</span>
+<span class="fc bfc" id="L40" title="All 2 branches covered.">        else if (thisDoubleValue &lt; fractionDoubleValue)</span>
+<span class="fc" id="L41">            return -1;</span>
+<span class="fc" id="L42">        else return 0;</span>
     }
 
 
     @Override
     public boolean equals(Object o) {
-<span class="fc bfc" id="L49" title="All 2 branches covered.">        if (this == o) return true;</span>
-<span class="fc bfc" id="L50" title="All 4 branches covered.">        if (o == null || getClass() != o.getClass()) return false;</span>
-<span class="fc" id="L51">        Fraction fraction = (Fraction) o;</span>
-<span class="fc bfc" id="L52" title="All 4 branches covered.">        return numerator == fraction.numerator &amp;&amp;</span>
+<span class="fc bfc" id="L48" title="All 2 branches covered.">        if (this == o) return true;</span>
+<span class="fc bfc" id="L49" title="All 4 branches covered.">        if (o == null || getClass() != o.getClass()) return false;</span>
+<span class="fc" id="L50">        Fraction fraction = (Fraction) o;</span>
+<span class="fc bfc" id="L51" title="All 4 branches covered.">        return numerator == fraction.numerator &amp;&amp;</span>
                 denumerator == fraction.denumerator;
     }
 
     @Override
     public int hashCode() {
-<span class="fc" id="L58">        return Objects.hash(numerator, denumerator);</span>
+<span class="fc" id="L57">        return Objects.hash(numerator, denumerator);</span>
     }
 
     @Override
     public String toString() {
-<span class="fc bfc" id="L63" title="All 2 branches covered.">        if (denumerator == 1) {</span>
-<span class="fc" id="L64">            return Integer.toString(numerator);</span>
+<span class="fc bfc" id="L62" title="All 2 branches covered.">        if (denumerator == 1) {</span>
+<span class="fc" id="L63">            return Integer.toString(numerator);</span>
         }
-<span class="fc" id="L66">        return numerator + &quot;/&quot; + denumerator;</span>
+<span class="fc" id="L65">        return numerator + &quot;/&quot; + denumerator;</span>
     }
 
-    //сложение дробей
     Fraction addFractions(Fraction fraction) {
-<span class="fc" id="L71">        int newDenumerator = this.denumerator * fraction.denumerator;</span>
-<span class="fc" id="L72">        int newNumerator = this.numerator * fraction.denumerator + fraction.numerator * this.denumerator;</span>
-<span class="fc" id="L73">        return new Fraction(newNumerator, newDenumerator);</span>
+<span class="fc" id="L69">        int newDenumerator = this.denumerator * fraction.denumerator;</span>
+<span class="fc" id="L70">        int newNumerator = this.numerator * fraction.denumerator + fraction.numerator * this.denumerator;</span>
+<span class="fc" id="L71">        return new Fraction(newNumerator, newDenumerator);</span>
     }
 
-    //умножение дробей
     Fraction multiplyFractions(Fraction fraction) {
-<span class="fc" id="L78">        int newDenumerator = this.denumerator * fraction.denumerator;</span>
-<span class="fc" id="L79">        int newNumerator = this.numerator * fraction.numerator;</span>
-<span class="fc" id="L80">        return new Fraction(newNumerator, newDenumerator);</span>
+<span class="fc" id="L75">        int newDenumerator = this.denumerator * fraction.denumerator;</span>
+<span class="fc" id="L76">        int newNumerator = this.numerator * fraction.numerator;</span>
+<span class="fc" id="L77">        return new Fraction(newNumerator, newDenumerator);</span>
     }
 
-    //сокращение дробей
     static Fraction fractionReduction(Fraction fraction) {
         Fraction someFraction;
-<span class="fc bfc" id="L86" title="All 2 branches covered.">        if (findMinimal(fraction) == 1) {</span>
-<span class="fc bfc" id="L87" title="All 2 branches covered.">            for (int i = fraction.denumerator; i &gt;= 2; i--) {</span>
-<span class="fc" id="L88">                someFraction = getNewFraction(fraction, i);//метод getNewFraction проверяет, делятся ли числитель и знаменатель без остатка на число</span>
-                //если да, то создаём новый объект на основе поделённых значений, если нет - вернем null
-<span class="fc bfc" id="L90" title="All 2 branches covered.">                if (someFraction != null) {//если getNewFraction вернул не null, дробь сократилась, возвращаем новый объект</span>
-<span class="fc" id="L91">                    return someFraction;</span>
+<span class="fc bfc" id="L82" title="All 2 branches covered.">        if (findMinimal(fraction) == 1) {</span>
+<span class="fc bfc" id="L83" title="All 2 branches covered.">            for (int i = fraction.denumerator; i &gt;= 2; i--) {</span>
+<span class="fc" id="L84">                someFraction = getNewFraction(fraction, i);</span>
+<span class="fc bfc" id="L85" title="All 2 branches covered.">                if (someFraction != null) {</span>
+<span class="fc" id="L86">                    return someFraction;</span>
                 }
             }
         } else {
-<span class="fc bfc" id="L95" title="All 2 branches covered.">            for (int i = fraction.numerator; i &gt;= 2; i--) {</span>
-<span class="fc" id="L96">                someFraction = getNewFraction(fraction, i);</span>
-<span class="fc bfc" id="L97" title="All 2 branches covered.">                if (someFraction != null) {</span>
-<span class="fc" id="L98">                    return someFraction;</span>
+<span class="fc bfc" id="L90" title="All 2 branches covered.">            for (int i = fraction.numerator; i &gt;= 2; i--) {</span>
+<span class="fc" id="L91">                someFraction = getNewFraction(fraction, i);</span>
+<span class="fc bfc" id="L92" title="All 2 branches covered.">                if (someFraction != null) {</span>
+<span class="fc" id="L93">                    return someFraction;</span>
                 }
             }
         }
-<span class="fc" id="L102">        System.out.println(&quot;дробь нельзя сократить&quot;);</span>
-<span class="fc" id="L103">        return new Fraction(fraction.numerator, fraction.denumerator);</span>
+<span class="fc" id="L97">        System.out.println(&quot;дробь нельзя сократить&quot;);</span>
+<span class="fc" id="L98">        return new Fraction(fraction.numerator, fraction.denumerator);</span>
     }
 
 
-    //метод getNewFraction проверяет, делятся ли числитель и знаменатель без остатка на число
-    //если да, то создаём новый объект на основе поделённых значений, если нет - вернем null
+
     static Fraction getNewFraction(Fraction fraction, int num) {
-<span class="fc bfc" id="L110" title="All 4 branches covered.">        if (fraction.numerator % num == 0 &amp;&amp; fraction.denumerator % num == 0) {</span>
-<span class="fc" id="L111">            return new Fraction(fraction.numerator / num, fraction.denumerator / num);</span>
+<span class="fc bfc" id="L104" title="All 4 branches covered.">        if (fraction.numerator % num == 0 &amp;&amp; fraction.denumerator % num == 0) {</span>
+<span class="fc" id="L105">            return new Fraction(fraction.numerator / num, fraction.denumerator / num);</span>
         }
-<span class="fc" id="L113">        return null;</span>
+<span class="fc" id="L107">        return null;</span>
     }
 
-    //определяет что меньше: числитель или знаменатель
+
     static int findMinimal(Fraction fraction) {
-<span class="fc bfc" id="L118" title="All 2 branches covered.">        if (fraction.numerator &gt;= fraction.denumerator) {</span>
-<span class="fc" id="L119">            return 1;</span>
+<span class="fc bfc" id="L112" title="All 2 branches covered.">        if (fraction.numerator &gt;= fraction.denumerator) {</span>
+<span class="fc" id="L113">            return 1;</span>
         } else {
-<span class="fc" id="L121">            return 2;</span>
+<span class="fc" id="L115">            return 2;</span>
         }
     }
 
